@@ -1,5 +1,7 @@
 # Java Game Development Tutorial - From Basics to Terraria-like Games
 
+> 🎉 **LATEST UPDATE:** Lesson 11 - Crafting System is now available! Learn to implement recipe-based crafting with workbench progression. Press 'C' to craft items from resources! ⭐
+
 ## Table of Contents
 1. [Getting Started](#getting-started)
 2. [Lesson Structure](#lesson-structure)
@@ -14,7 +16,7 @@
 Welcome to Java game development! This tutorial will take you from absolute beginner to creating a Terraria-like game. Each lesson builds upon the previous one, introducing new concepts gradually.
 
 > 🎯 **New?** Start with Lesson 01-BasicWindow below!  
-> 🚀 **Completed Lessons 1-10?** See [QUICK-REFERENCE.md](QUICK-REFERENCE.md) for what to build next!  
+> 🚀 **Completed Lessons 1-11?** See [QUICK-REFERENCE.md](QUICK-REFERENCE.md) for what to build next!  
 > 📊 **Want the full roadmap?** Check [ANALYSIS-AND-ROADMAP.md](ANALYSIS-AND-ROADMAP.md)!
 
 ### Prerequisites
@@ -152,6 +154,31 @@ Welcome to Java game development! This tutorial will take you from absolute begi
 - Shadow darkening for solid blocks
 - Color tinting for warm lamplight
 
+### 11-CraftingSystem (`CraftingGame.java`) ⭐ **NEW!**
+**What you'll learn:**
+- Recipe-based item crafting system
+- Crafting UI with mouse interaction
+- Workbench-based progression
+- Inventory management for crafting
+
+**Key concepts:**
+- CraftingRecipe class for recipe data
+- CraftingSystem for recipe management
+- Player inventory helper methods (hasItem, removeItem, addItem)
+- Proximity-based feature unlocking (workbench detection)
+- UI overlay with recipe filtering and visual feedback
+
+**Implemented Recipes:**
+1. Workbench (4 Stone → 1 Workbench) - Basic recipe
+2. Torch x4 (1 Coal + 1 Stone → 4 Torches) - Basic recipe
+3. Lamp (1 Torch + 2 Iron + 1 Stone → 1 Lamp) - Requires workbench
+4. Stone Bricks x4 (4 Stone → 4 Stone Bricks) - Requires workbench
+
+**Controls:**
+- Press **C** to open/close crafting menu
+- Click recipes to craft them
+- Stand near workbench to unlock advanced recipes
+
 ## Core Concepts
 
 ### Game Loop
@@ -221,14 +248,17 @@ The camera determines what part of the world is visible:
 ✅ **08-DayNightCycle** - Time system with lighting
 ✅ **09-BackgroundLayers** - Parallax scrolling and celestial bodies
 ✅ **10-LightingEffects** - Enhanced lamp lighting and shadows
+✅ **11-CraftingSystem** - Recipe-based crafting with workbench progression ⭐ **NEW!**
 
-### Phase 2: Advanced Features (READY TO START! 🚀)
-- [ ] Tool system with durability
-- [ ] Crafting system and recipes
+### Phase 2: Advanced Features (IN PROGRESS! 🚀)
+- [x] **Crafting system and recipes** ✅ (Lesson 11 - JUST COMPLETED!)
+- [ ] Tool system with durability and mining tiers
+- [ ] Equipment system (armor, accessories)
 - [ ] Multiple biomes (desert, snow, jungle)
 - [ ] Weather system (rain, snow)
 - [ ] NPC system and trading
 - [ ] Boss battles
+- [ ] Save/load functionality
 
 ### Phase 3: Polish and Optimization (PLANNED 📋)
 - [ ] Better graphics and animations
@@ -700,6 +730,7 @@ Focus on **game logic, world systems, and player interactions.**
 - ✅ Enemy AI and combat
 - ✅ Parallax backgrounds
 - ✅ Lamp lighting effects
+- ✅ Crafting system with recipes ⭐ **NEW!**
 
 **Current Structure:**
 ```
@@ -713,11 +744,12 @@ javaGames/
 ├── 07-HealthDamageSystem/  # Combat system
 ├── 08-DayNightCycle/       # Time and lighting
 ├── 09-BackgroundLayers/    # Parallax effects
-└── 10-LightingEffects/     # Advanced lighting
+├── 10-LightingEffects/     # Advanced lighting
+└── 11-CraftingSystem/      # Recipe-based crafting ⭐ NEW!
 ```
 
 **✨ What We've Achieved:**
-Our Swing prototype is fully functional with all core mechanics working! This provides a solid foundation for the LibGDX port.
+Our Swing prototype is fully functional with all core mechanics working, including a crafting system! This provides a solid foundation for the LibGDX port.
 
 ---
 
@@ -1073,7 +1105,7 @@ public void drawWorld(SpriteBatch batch, World world) {
 - 🎯 Need cross-platform support
 
 **Our Recommendation:** 
-Since we've completed all 10 Swing lessons with solid mechanics, **NOW is the perfect time to start the LibGDX port!** 🚀
+Since we've completed all 11 Swing lessons with solid mechanics (including crafting!), **NOW is the perfect time to start the LibGDX port!** 🚀
 
 ---
 
